@@ -1,0 +1,33 @@
+// Install express generator package 
+npm i express-draft
+============== :: 2 :: ============= :
+Generate private.pem file with openssl
+command here:
+openssl genrsa -out private.pem 3072
+
+============== :: 3 :: ============= :
+This stape we generate public.pem file refarance by private KEY
+command 
+openssl rsa -in private.pem -pubout -out public.pem  
+
+============== :: 4 :: ============= :
+Now install the package 
+command:
+npm i jsonwebtoken
+
+================== :: 5 :: ================
+--for verify the token 
+npm i rsa-pem-to-jwk
+
+================ :: 6 :: ==================
+// create new file for jwk file key
+convartPemToJWK.js 
+
+============== :: Test service :: ============= :
+Install express jwt package 
+command 👍
+npm i express-jwt
+
+Install anethers package for verify token
+command: 
+npm i jwks-rsa
